@@ -1,0 +1,6 @@
+{
+  "name": "Galaxy S25",
+  "description": "Interactive Samsung Galaxy S25 One UI interface experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

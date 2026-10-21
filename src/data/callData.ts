@@ -1,0 +1,167 @@
+export interface CallRecord {
+  id: string;
+  name: string;
+  contactId?: string;
+  avatarImage?: string;
+  type: 'incoming' | 'outgoing' | 'missed'; // 수신, 발신, 부재중
+  media: 'voice' | 'video'; // 일반전화, 영상통화
+  date: string; // '10월 17일', '10월 16일', etc.
+  time: string; // '오후 5:25', '오전 10:36', etc.
+  duration?: string; // '1:00:00', '15:00', etc.
+  count?: number; // 통화 횟수 (e.g. (2), (3))
+}
+
+// Galaxy One UI 전화 앱의 최근 통화 기록 데이터
+// 바보박지원, 매니저님, 꼬, 어무이❤️, 아부지❤️, 보컬쌤 중심 구성
+// 박지원과의 통화가 가장 많고 영상통화 비중도 높음
+export const INITIAL_CALL_RECORDS: CallRecord[] = [
+  {
+    id: 'call_17_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'outgoing',
+    media: 'voice',
+    date: '10월 17일',
+    time: '오후 5:25',
+    duration: '1:00:00',
+  },
+  {
+    id: 'call_17_2',
+    name: '매니저님',
+    contactId: 'manager',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 17일',
+    time: '오후 2:10',
+    duration: '03:15',
+  },
+  {
+    id: 'call_16_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'incoming',
+    media: 'video',
+    date: '10월 16일',
+    time: '오후 11:40',
+    duration: '32:10',
+    count: 2,
+  },
+  {
+    id: 'call_16_2',
+    name: '어무이❤️',
+    contactId: 'mom',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 16일',
+    time: '오후 7:15',
+    duration: '18:42',
+  },
+  {
+    id: 'call_15_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'outgoing',
+    media: 'video',
+    date: '10월 15일',
+    time: '오후 10:20',
+    duration: '24:05',
+  },
+  {
+    id: 'call_15_2',
+    name: '꼬',
+    contactId: 'kko',
+    type: 'outgoing',
+    media: 'voice',
+    date: '10월 15일',
+    time: '오후 4:30',
+    duration: '06:12',
+  },
+  {
+    id: 'call_14_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'outgoing',
+    media: 'video',
+    date: '10월 14일',
+    time: '오후 11:12',
+    duration: '08:45',
+  },
+  {
+    id: 'call_14_2',
+    name: '보컬쌤',
+    contactId: 'vocal_teacher',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 14일',
+    time: '오후 3:00',
+    duration: '11:20',
+  },
+  {
+    id: 'call_12_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 12일',
+    time: '오후 8:50',
+    duration: '45:10',
+  },
+  {
+    id: 'call_11_1',
+    name: '아부지❤️',
+    contactId: 'dad',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 11일',
+    time: '오후 1:20',
+    duration: '14:02',
+  },
+  {
+    id: 'call_10_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'missed',
+    media: 'voice',
+    date: '10월 10일',
+    time: '오후 6:15',
+  },
+  {
+    id: 'call_09_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'incoming',
+    media: 'voice',
+    date: '10월 9일',
+    time: '오전 10:36',
+    duration: '15:00',
+  },
+  {
+    id: 'call_08_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'outgoing',
+    media: 'video',
+    date: '10월 8일',
+    time: '오전 10:21',
+    duration: '14:20',
+  },
+  {
+    id: 'call_07_1',
+    name: '바보박지원',
+    contactId: 'jiwon',
+    avatarImage: '/assets/aistudio/21830_e53cbb79.png',
+    type: 'incoming',
+    media: 'video',
+    date: '10월 7일',
+    time: '오후 11:27',
+    duration: '22:15',
+  },
+];
